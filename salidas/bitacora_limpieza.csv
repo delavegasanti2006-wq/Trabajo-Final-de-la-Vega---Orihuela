@@ -1,0 +1,10 @@
+paso,filas_afectadas,pct_base_inicial,decision
+Filas exactamente duplicadas,58,0.7493540051679587,Se borran: carga doble del mismo registro
+Películas repetidas con presupuesto distinto,14,0.1808785529715762,"Se conserva el id original (<90000), cuyo presupuesto es redondo como el resto de la base"
+"Centinela en duracion_minutos ([0, 999])",34,0.43927648578811374,"Se reemplaza por NaN: es un 'no sé', no un dato"
+Centinela en puntaje_imdb ([0]),22,0.2842377260981912,"Se reemplaza por NaN: es un 'no sé', no un dato"
+"Centinela en presupuesto_usd ([0, -1])",48,0.6201550387596899,"Se reemplaza por NaN: es un 'no sé', no un dato"
+Recaudación con signo negativo,11,0.1421188630490956,Se pasa a valor absoluto: magnitud coherente con una película real
+Presupuesto en miles de dólares (< USD 1 M y retorno > 100x),48,0.6201550387596899,Se multiplica por 1.000. Limitación: dos micropresupuestos reales famosos caen en la regla
+"Categorías escritas de varias maneras (género, clasificación, país, productora)",2879,37.19638242894057,Se unifican a una grafía canónica; no se pierde ninguna fila
+Películas sin presupuesto (centinelas incluidos),2219,28.669250645994833,Se excluyen del cálculo de retorno y se corrige con ponderadores como escenario de robustez

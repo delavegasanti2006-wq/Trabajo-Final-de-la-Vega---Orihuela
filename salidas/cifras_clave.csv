@@ -1,0 +1,15 @@
+,valor,seccion
+Películas en la base cruda,7740,1.2
+Películas en la base limpia,7668,1.3
+Películas con retorno calculable,5389,2.3
+% sin presupuesto (con centinelas),28.9%,1.9
+Retorno medio de la industria,3.33x,3.2
+Retorno mediano de la industria,1.82x,3.2
+"% de películas que NO recupera (2,5x)",61.3%,3.3
+"Portafolio: retorno mediano (ajustado, entrenamiento)",4.16x,5.3
+"Portafolio: P(no llegar a 2,5x) ajustada, entrenamiento",10.1%,5.3
+"Portafolio: P(no llegar a 2,5x) ajustada, prueba 2015-2020",1.0%,5.5
+"Portafolio: margen neto mediano estimado (ajustado, entrenamiento)",19%,5.3
+"Portafolio: P(no llegar a 2,5x) en década adversa (años 90)",35.0%,5.3
+Capital asignado a proyectos (USD M),450,5.2
+Proyectos del portafolio,14,5.2
