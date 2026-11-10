@@ -38,7 +38,7 @@ Requiere Python 3.10 o superior.
 
 ```bash
 # 1. Clonar el repositorio y entrar a la carpeta
-[git clone <url-del-repositorio>](https://github.com/delavegasanti2006-wq/Trabajo-Final-de-la-Vega---Orihuela.git)
+git clone https://github.com/delavegasanti2006-wq/Trabajo-Final-de-la-Vega---Orihuela.git
 cd Trabajo-Final-de-la-Vega---Orihuela
 
 # 2. Crear y activar el entorno
@@ -89,9 +89,9 @@ Las rutas son relativas (`../datos`), así que hay que abrirlo desde la carpeta 
 ## Decisiones principales
 
 - **Presupuestos en miles:** 48 películas con presupuesto menor a USD 1 M y retorno mayor a 100x se multiplican por 1.000.
-- **Faltantes:** el 28,9% de las películas no tiene presupuesto y falta de forma no aleatoria; se excluyen del cálculo de retorno y se agrega un escenario de robustez que les imputa la mediana del presupuesto de su grupo (quintil de recaudación y origen).
+- **Faltantes:** el 28,9% de las películas no tiene presupuesto y falta de forma no aleatoria; se excluyen del cálculo de retorno y se agrega un escenario alternativo que les imputa la mediana del presupuesto de su grupo (quintil de recaudación y origen).
 - **Métrica de riesgo:** probabilidad de no llegar a 2,5x y retorno del peor decil, no el promedio.
-- **Portafolio:** el retorno se calcula con medianas por arquetipo en cada ventana de tres años de la historia (1980-2014), ponderadas por el capital de cada arquetipo; la probabilidad de perder capital es el porcentaje de ventanas por debajo de 2,5x.
+- **Portafolio:** el retorno se calcula con medianas por arquetipo en cada ventana de tres años de la historia (1980-2014), ponderadas por el capital de cada arquetipo; el riesgo se mide como el porcentaje de ventanas por debajo de 2,5x (una frecuencia histórica, no una probabilidad exacta).
 
 ## Datos
 
