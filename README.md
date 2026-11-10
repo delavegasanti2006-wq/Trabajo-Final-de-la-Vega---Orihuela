@@ -3,11 +3,11 @@
 Tesis de inversión y portafolio en la industria del cine.
 Programación Analítica II · Universidad de Montevideo · S2 2026 · Docente: Camila Palomeque
 
-**Integrantes:** Santiago de la Vega y Geronimo Orihuela
+**Integrantes:** _Nombre Apellido_ y _Nombre Apellido_
 
 ## Qué hace el proyecto
 
-Arroyo Capital, un fondo de private equity ficticio, va a colodcar **USD 500 millones** en producción cinematográfica.
+Arroyo Capital, un fondo de private equity ficticio, va a colocar **USD 500 millones** en producción cinematográfica.
 El proyecto responde, con 40 años de datos de películas (1980-2020), qué clase de película tiene mejor relación entre riesgo y retorno
 y cuánto se puede perder. El análisis sigue las cinco etapas de la letra:
 
@@ -15,12 +15,12 @@ y cuánto se puede perder. El análisis sigue las cinco etapas de la letra:
 2. Variables nuevas: dólares constantes de 2020 con el IPC de EE.UU., retorno (recaudación / presupuesto) y regla del 2,5x.
 3. Análisis de negocio: crecimiento real, retorno por segmento, probabilidad de perder plata y peor decil, segmentos dominantes.
 4. Visualizaciones (incluye un gráfico interactivo con Plotly).
-5. Tesis de inversión: cinco arquetipos, asignación de los USD 500 M, simulación del portafolio y prueba fuera de muestra (criterios hasta 2014, verificación 2015-2020).
+5. Tesis de inversión: cinco arquetipos, asignación de los USD 500 M, retorno del portafolio en ventanas históricas de tres años y prueba fuera de muestra (criterios hasta 2014, verificación 2015-2020).
 
 ## Estructura del repositorio
 
 ```
-proyecto-final-delaVega-Orihuela/
+proyecto-final-apellido1-apellido2/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -39,7 +39,7 @@ Requiere Python 3.10 o superior.
 ```bash
 # 1. Clonar el repositorio y entrar a la carpeta
 git clone <url-del-repositorio>
-cd proyecto-final-delaVega-Orihuela
+cd proyecto-final-apellido1-apellido2
 
 # 2. Crear y activar el entorno
 python -m venv .venv
@@ -67,7 +67,7 @@ Las rutas son relativas (`../datos`), así que hay que abrirlo desde la carpeta 
 | 2.1 a 2.3 | Dólares constantes, retorno, regla del 2,5x y variables adicionales. Bitácora de cambios |
 | 3.1 a 3.3 | Crecimiento, retorno por género/clasificación/origen/franquicia, IMDb y riesgo por segmento |
 | 4.2 a 4.5 | Distribución del retorno, comparación de géneros, presupuesto contra recaudación y plano de riesgo (Plotly) |
-| 5.1 a 5.6 | Arquetipos, asignación, simulación, alternativas, fuera de muestra, qué no hacer y limitaciones |
+| 5.1 a 5.6 | Arquetipos, asignación, retorno por ventanas de tres años, alternativas, fuera de muestra, qué no hacer y limitaciones |
 | Cierre | Cifras clave con su sección de origen |
 
 ## Salidas generadas (`salidas/`)
@@ -75,23 +75,23 @@ Las rutas son relativas (`../datos`), así que hay que abrirlo desde la carpeta 
 | Archivo | Qué es |
 |---|---|
 | `01_evolucion_nominal_vs_real.png` | Recaudación mediana por año, corriente contra constante |
-| `02_mapa_calor_correlaciones.png` | Correlaciones (Spearman) |
+| `02_mapa_calor_correlaciones.png` | Mapa de calor de correlaciones |
 | `03_distribucion_retorno.png` | Distribución del retorno en escala log |
 | `04_retorno_por_genero.png` | Mediana y promedio por género |
-| `05_presupuesto_vs_recaudacion.png` | Hexbin presupuesto contra recaudación |
+| `05_presupuesto_vs_recaudacion.png` | Dispersión presupuesto contra recaudación (escala log y transparencia) |
 | `06_riesgo_retorno_interactivo.html` | Gráfico interactivo Plotly (abrir en el navegador) |
-| `07_fuera_de_muestra.png` | Entrenamiento contra prueba |
+| `07_fuera_de_muestra.png` | Entrenamiento contra prueba, y retorno del portafolio por ventana |
 | `bitacora_limpieza.csv` | Cada corrección con el % de la base afectado |
-| `segmentos_riesgo_retorno.csv` | Riesgo y retorno de los 49 segmentos |
+| `segmentos_riesgo_retorno.csv` | Riesgo y retorno de los 48 segmentos |
 | `asignacion_fondo.csv` | Asignación propuesta de los USD 500 M |
 | `cifras_clave.csv` | Números de la presentación y la sección donde nacen |
 
 ## Decisiones principales
 
 - **Presupuestos en miles:** 48 películas con presupuesto menor a USD 1 M y retorno mayor a 100x se multiplican por 1.000.
-- **Faltantes:** el 28,9% de las películas no tiene presupuesto y falta de forma no aleatoria; se excluyen del cálculo de retorno y se corrige con ponderadores como escenario de robustez.
+- **Faltantes:** el 28,9% de las películas no tiene presupuesto y falta de forma no aleatoria; se excluyen del cálculo de retorno y se agrega un escenario de robustez que les imputa la mediana del presupuesto de su grupo (quintil de recaudación y origen).
 - **Métrica de riesgo:** probabilidad de no llegar a 2,5x y retorno del peor decil, no el promedio.
-- **Simulación:** 20.000 portafolios con semilla fija (`SEMILLA = 42`), por lo que los resultados son reproducibles.
+- **Portafolio:** el retorno se calcula con medianas por arquetipo en cada ventana de tres años de la historia (1980-2014), ponderadas por el capital de cada arquetipo; la probabilidad de perder capital es el porcentaje de ventanas por debajo de 2,5x.
 
 ## Datos
 
