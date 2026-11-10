@@ -3,7 +3,7 @@
 Tesis de inversión y portafolio en la industria del cine.
 Programación Analítica II · Universidad de Montevideo · S2 2026 · Docente: Camila Palomeque
 
-**Integrantes:** _Nombre Apellido_ y _Nombre Apellido_
+**Integrantes:** Santiago de la Vega y Geronimo Orihuela
 
 ## Qué hace el proyecto
 
@@ -20,7 +20,7 @@ y cuánto se puede perder. El análisis sigue las cinco etapas de la letra:
 ## Estructura del repositorio
 
 ```
-proyecto-final-apellido1-apellido2/
+Trabajo-Final-de-la-Vega---Orihuela/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -38,8 +38,8 @@ Requiere Python 3.10 o superior.
 
 ```bash
 # 1. Clonar el repositorio y entrar a la carpeta
-git clone <url-del-repositorio>
-cd proyecto-final-apellido1-apellido2
+[git clone <url-del-repositorio>](https://github.com/delavegasanti2006-wq/Trabajo-Final-de-la-Vega---Orihuela.git)
+cd Trabajo-Final-de-la-Vega---Orihuela
 
 # 2. Crear y activar el entorno
 python -m venv .venv
