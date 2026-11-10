@@ -3,11 +3,11 @@
 Tesis de inversión y portafolio en la industria del cine.
 Programación Analítica II · Universidad de Montevideo · S2 2026 · Docente: Camila Palomeque
 
-**Integrantes:** _Nombre Apellido_ y _Nombre Apellido_
+**Integrantes:** Santiago de la Vega y Geronimo Orihuela
 
 ## Qué hace el proyecto
 
-Arroyo Capital, un fondo de private equity ficticio, va a colocar **USD 500 millones** en producción cinematográfica.
+Arroyo Capital, un fondo de private equity ficticio, va a colodcar **USD 500 millones** en producción cinematográfica.
 El proyecto responde, con 40 años de datos de películas (1980-2020), qué clase de película tiene mejor relación entre riesgo y retorno
 y cuánto se puede perder. El análisis sigue las cinco etapas de la letra:
 
@@ -20,7 +20,7 @@ y cuánto se puede perder. El análisis sigue las cinco etapas de la letra:
 ## Estructura del repositorio
 
 ```
-proyecto-final-apellido1-apellido2/
+proyecto-final-delaVega-Orihuela/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
@@ -39,7 +39,7 @@ Requiere Python 3.10 o superior.
 ```bash
 # 1. Clonar el repositorio y entrar a la carpeta
 git clone <url-del-repositorio>
-cd proyecto-final-apellido1-apellido2
+cd proyecto-final-delaVega-Orihuela
 
 # 2. Crear y activar el entorno
 python -m venv .venv
